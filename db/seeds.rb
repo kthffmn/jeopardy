@@ -1,14 +1,19 @@
 require 'json'
 
 def main
+  puts "Starting..."
+
   file = File.read('db/questions.json')
   data = JSON.parse(file)
   num_complete = 0
   data.each_with_index do |question|
-    puts "Num of Qs in DB: #{num_complete}" if num_complete % 500 == 0
+    puts "Num of Qs in DB: #{num_complete}" if num_complete % 1000 == 0
     create_question(question)
     num_complete += 1
   end
+
+  puts "DATA: #{num_complete} questions"
+  puts "DATABASE: #{Question.all.count} questions, #{Category.all.count} categories"
 end
 
 def create_question(question)
