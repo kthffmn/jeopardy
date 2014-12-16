@@ -1,3 +1,14 @@
-<div class="jumbotron">
-  <h1></h1>
-</div>
+<% if !current_user %>
+
+  <div class="jumbotron">
+    <h1><%= link_to "<i class=\"fa fa-facebook-square\"></i> Login".html_safe, login_path, :class => 'btn btn-primary btn-lg' %></h1>
+  </div>
+
+<% else %>
+
+  <div class="jumbotron">
+    <h1>Welcom <%= @user.name %>!</h1>
+    <h3><%= link_to "Logout", logout_path %></h3>
+  </div>
+    
+<% end %>

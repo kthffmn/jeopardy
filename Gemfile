@@ -5,13 +5,18 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.rc2'
 
-gem 'sass-rails'
+gem 'sass', '~> 3.2.19'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
+
+
+gem 'sprockets', '2.11.0' # 2.12.0 is broken
+gem 'sprockets-rails'
+gem 'sass-rails', '4.0.2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
@@ -31,7 +36,8 @@ gem 'figaro'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "nested_form"
-gem "bootstrap-sass"
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
 
 # Icons
 gem "font-awesome-rails"
@@ -43,7 +49,6 @@ group :test, :development do
   gem "rspec-rails"
   gem "capybara"
   gem "selenium-webdriver"
-  gem "better_errors"
   gem "sprockets_better_errors"
   gem "binding_of_caller"
   gem "factory_girl_rails"

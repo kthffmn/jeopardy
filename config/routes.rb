@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  get '/auth/:provider/callback', to: 'sessions#create'
+
+  root to: 'static_pages#home'
+
+  get '/auth/facebook', :as => 'login'
+
+  get '/auth/facebook/callback' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy', :as => 'log_out'
+
 end
