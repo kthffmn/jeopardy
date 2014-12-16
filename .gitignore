@@ -19,3 +19,6 @@
 db/questions.json
 # Ignore application configuration
 /config/application.yml
+
+
+app/.DS_Store

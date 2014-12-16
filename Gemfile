@@ -24,7 +24,7 @@ gem 'spring',        group: :development
 
 # For GitHub OAuth
 gem 'omniauth'
-gem 'omniauth-github'
+gem 'omniauth-facebook'
 gem 'figaro'
 
 # stlying and jquery
