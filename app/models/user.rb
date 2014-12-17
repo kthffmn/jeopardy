@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :user_games
+  has_many :games, through: :user_games
 
   def self.find_or_create_from_auth_hash(auth)
     found = User.where(:provider => auth["provider"], :uid => auth["uid"])

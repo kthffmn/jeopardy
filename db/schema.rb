@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216200546) do
+ActiveRecord::Schema.define(version: 20141216223240) do
 
   create_table "categories", force: true do |t|
     t.string "name"
+  end
+
+  create_table "games", force: true do |t|
+    t.integer "show_id"
   end
 
   create_table "prizes", force: true do |t|
@@ -37,6 +41,12 @@ ActiveRecord::Schema.define(version: 20141216200546) do
 
   create_table "shows", force: true do |t|
     t.integer "number"
+  end
+
+  create_table "user_games", force: true do |t|
+    t.integer "user_id"
+    t.integer "game_id"
+    t.integer "points"
   end
 
   create_table "users", force: true do |t|
