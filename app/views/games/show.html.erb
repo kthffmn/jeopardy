@@ -1,0 +1,18 @@
+<div class="row">
+  <% @data.each do |category, questions| %>
+    <div class="col-md-2 game-card category-card">
+      <div class="category-card">
+        <h4><%= category.upcase %><h4>
+      </div>
+
+      <% questions.each do |question| %>
+        <div class="row">
+          <div class="col-xs-12 game-card question-card"  data-answer="<%= question.answer %>" data-question="<%= question.text %>">
+            <h1>$<%= question.prize.amount %><h1>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy', :as => 'log_out'
 
+  resources :games, :only => [:new, :show]
 end

@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1>Welcome <%= current_user.first_name %>!</h1>
+  <span>
+    <%= link_to "Play", new_game_path, :class => 'btn btn-primary btn-lg' %>
+  </span>
+  <span>
+    <%= link_to "Logout", log_out_path, :method => :delete, :class => 'btn btn-info btn-lg' %>
+  </span>
+</div>

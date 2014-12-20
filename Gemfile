@@ -48,6 +48,7 @@ gem "chartkick"
 group :test, :development do
   gem "rspec-rails"
   gem "capybara"
+  gem "better_errors"
   gem "selenium-webdriver"
   gem "sprockets_better_errors"
   gem "binding_of_caller"
